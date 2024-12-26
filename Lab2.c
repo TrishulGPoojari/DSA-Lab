@@ -39,7 +39,7 @@ void replace()
         {
             for(j=0;j<strlen(REP);j++)  
                 FIN[q++] = REP[j];
-            k = k + r;
+            k = k + r;        //using r is appropriate as k is iterating over old string
         }
         else
             FIN[q++] = T[k++];
