@@ -27,7 +27,7 @@ int slen(char *s)
 void replace()
 {
     int k=0,q=0,s=slen(T),r=slen(P),i,j; //k is itereate over old string and q for new string 
-    //i and j is too loop over the patterns 
+    //i and j is too loop over the patterns. i for the replacement pattern and j for the replacing pattern 
     while(k<s)
     {
         for(i=0;i<r;i++)
