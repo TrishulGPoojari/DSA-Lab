@@ -1,4 +1,5 @@
 /*Develop a Program in C for converting an Infix Expression to Postfix Expression. Program should support for both parenthesized and free parenthesized expressions with the operators: +, -, *, /, % (Remainder), ^ (Power) and alphanumeric operands.*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -7,11 +8,23 @@
 char infix[SIZE], postfix[SIZE], stack[SIZE];
 int top = -1;
 
-// Function prototypes
 void evaluate();
-void push(char item);
+void push(char item);   //item refers to the element to push 
 char pop();
 int prec(char symb);
+
+int main() {
+    printf("Enter a valid infix expression: ");
+    scanf("%s", infix);
+    
+    evaluate();
+    
+    printf("The entered infix expression is: %s\n", infix);
+    printf("The postfix expression is: %s\n", postfix);
+    
+    return 0;
+}
+
 
 void evaluate() {
     int i = 0, j = 0;  //i iterates over infix and j iterates over postfix
@@ -92,14 +105,3 @@ int prec(char symb) {
     }
 }
 
-int main() {
-    printf("Enter a valid infix expression: ");
-    scanf("%s", infix);
-    
-    evaluate();
-    
-    printf("The entered infix expression is: %s\n", infix);
-    printf("The postfix expression is: %s\n", postfix);
-    
-    return 0;
-}
