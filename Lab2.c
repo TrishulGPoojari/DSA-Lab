@@ -38,7 +38,7 @@ void replace()
         if (i==r)
         {
             for(j=0;j<strlen(REP);j++)  
-            FIN[q++] = REP[j];
+                FIN[q++] = REP[j];
             k = k + r;
         }
         else
