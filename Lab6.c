@@ -13,10 +13,10 @@ void enqueue()
     {
             if(front==-1)
                 front++;
-            rear=rear=(rear+1)%MAX;
+            rear=(rear+1)%MAX;
             printf("Enter the character to be inserted:\n");
             scanf("%c",&queue[rear]);
-            getchar();
+            getchar();  //to remove input buffer
     }
 }
 char dequeue(){
@@ -45,7 +45,7 @@ void display(){
             printf("%c ",queue[i]);
         }
         printf("%c ",queue[i]);   //the last element is printed here
-        printf("\n Front is at %d\nRear is at %d\n",front,rear);
+        printf("\nFront is at %c\nRear is at %c\n",queue[front],queue[rear]);
         }
 }
 
