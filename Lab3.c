@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+//#include <string.h>
 #define MAX_ELE 5
+
 void push();
 void pop();
 void display();
@@ -10,6 +11,7 @@ void status();
 
 int top=-1; 
 int s[MAX_ELE];
+
 int main()
 {
     int ch,n;
@@ -51,7 +53,7 @@ void display()
     {
     printf("Stack elements are\n");
     for(i=(top); i>=0; i--)
-    printf("%d ",s[i]);
+        printf("%d ",s[i]);
     }
 }
 void push()
@@ -59,9 +61,8 @@ void push()
     int ele;
     if( (top)==MAX_ELE-1)
     { printf("stack overflow\n"); return; }
-    (top)++;
     printf("enter the element\n"); scanf("%d",&ele);
-    s[top]=ele;
+    s[++top]=ele;
 }
 void pop()
 {
@@ -69,14 +70,13 @@ void pop()
     printf("stack underflow\n");
     else {
         printf("element popped is\n");
-        printf("%d\n",s[top]);
-        top--;
+        printf("%d\n",s[top--]);
     }
 }
 
 void palin()
 {
-    int i,flag=0;
+    int i;       //flag is not needed in this code 
     display();
     for(int i=0;i<=(top/2);i++)
         if(s[i]!=s[top-i])
@@ -84,5 +84,5 @@ void palin()
             printf("\nIt is not a palindrome\n");
             return;
         }
-        printf("\nIt is a palindrome\n");
+    printf("\nIt is a palindrome\n");
 }
