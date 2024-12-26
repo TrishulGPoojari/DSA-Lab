@@ -32,12 +32,12 @@ void replace()
     {
         for(i=0;i<r;i++)
         {
-        if (P[i] != T[k+i])
+        if (P[i] != T[k+i])         //i will be the same as pattern length as the loop will stop once it becomes equal
             break;
         }
         if (i==r)
         {
-            for(j=0;j<strlen(REP);j++)
+            for(j=0;j<strlen(REP);j++)  
             FIN[q++] = REP[j];
             k = k + r;
         }
