@@ -13,7 +13,7 @@ void enqueue()
     {
             if(front==-1)
                 front++;
-            rear=rear=(rear+1)%5;
+            rear=rear=(rear+1)%MAX;
             printf("Enter the character to be inserted:\n");
             scanf("%c",&queue[rear]);
             getchar();
