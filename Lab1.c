@@ -40,10 +40,11 @@ void read()
     cal[i].nday = (char *) malloc(9);
     printf("Enter name of the day "); scanf(" %s",cal[i].nday);
     printf("Enter date of the day "); scanf("%d",&(cal[i].dday));
-    getchar();
+    getchar();        //used to remove the newline character from the input buffer
+    // used before taking the string input using scanf or fgets( after scanf for any datatype) 
     printf("Enter description of the activity ");
     cal[i].desc = (char *) malloc(400);
-    scanf(" %399[^\n]",cal[i].desc);
+    scanf(" %399[^\n]",cal[i].desc);  //char set for taking input till 399 character or next line
     //cal[i].desc = (char *) realloc(cal[i].desc,strlen(cal[i].desc)+1);
     }
 }
